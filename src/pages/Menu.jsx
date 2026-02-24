@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 export default function Menu({ type }) {
   const [selectedCategory, setSelectedCategory] = useState('Todos');
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [showInfoModal, setShowInfoModal] = useState(true);
   const { cart } = useCart();
   const { products: normalProducts, easterProducts } = useProducts();
 
