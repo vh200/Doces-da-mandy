@@ -5,7 +5,7 @@ const ProductContext = createContext();
 
 export function ProductProvider({ children }) {
   // Versão dos dados para invalidar cache antigo se a estrutura mudar
-  const DATA_VERSION = 'v28_fix_cento_image_v4_final';
+  const DATA_VERSION = 'v29_fix_cento_image_real';
 
   // Lista de IDs que DEVEM ser removidos permanentemente nesta versão (blacklist)
   // Útil para remover produtos que foram comentados no código mas podem estar persistindo no cache
