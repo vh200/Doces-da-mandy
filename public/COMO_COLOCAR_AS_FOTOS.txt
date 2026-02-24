@@ -1,0 +1,29 @@
+INSTRUÇÕES PARA ADICIONAR IMAGENS
+
+1. Cardápio Tradicional:
+   Coloque as fotos dos doces normais na pasta:
+   public/images/tradicional/
+
+   Os nomes dos arquivos devem ser exatamente:
+   - brigadeiro.jpg
+   - beijinho.jpg
+   - brownie.jpg
+   - brownie-recheado.jpg
+   - bolo-pote-cenoura.jpg
+   - bolo-pote-red-velvet.jpg
+
+2. Cardápio de Páscoa:
+   Coloque as fotos de Páscoa na pasta:
+   public/images/pascoa/
+
+   Os nomes dos arquivos devem ser exatamente:
+   - ovo-ninho-nutella.jpg
+   - ovo-ferrero.jpg
+   - trio-mini-ovos.jpg
+   - barra-oreo.jpg
+   - bombons-sortidos.jpg
+
+IMPORTANTE:
+- As imagens devem estar no formato JPG (.jpg).
+- Se sua imagem for PNG ou outro formato, você precisará alterar o arquivo src/data/products.js para corresponder.
+- Tente usar imagens quadradas ou com a mesma proporção para ficar bonito no site.

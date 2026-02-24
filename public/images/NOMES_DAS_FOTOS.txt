@@ -1,0 +1,55 @@
+PARA QUE AS FOTOS APAREÇAM AUTOMATICAMENTE NO SITE:
+1. Renomeie suas fotos com os nomes exatos abaixo.
+2. Coloque-as dentro das pastas indicadas.
+
+PASTA: public/images/tradicional
+--------------------------------------------------
+Produto: Cento de Docinhos Tradicionais
+Nome do arquivo: cento_tradicional.jpg
+
+Produto: 50 Docinhos Tradicionais
+Nome do arquivo: 50_tradicional.jpg
+
+Produto: Cento de Docinhos Gourmet
+Nome do arquivo: cento_gourmet.jpg
+
+Produto: 50 Docinhos Gourmet
+Nome do arquivo: 50_gourmet.jpg
+
+Produto: Cento de Docinhos Temáticos
+Nome do arquivo: cento_tematico.jpg
+
+Produto: 50 Docinhos Temáticos
+Nome do arquivo: 50_tematico.jpg
+
+Produto: Mini Brownie
+Nome do arquivo: mini_brownie.jpg
+
+
+PASTA: public/images/pascoa
+--------------------------------------------------
+Produto: Ovo de Colher Clássico (250g)
+Nome do arquivo: ovo_classico_250g.jpg
+
+Produto: Ovo de Colher Clássico (350g)
+Nome do arquivo: ovo_classico_350g.jpg
+
+Produto: Ovo de Colher Clássico (500g)
+Nome do arquivo: ovo_classico_500g.jpg
+
+Produto: Ovo de Colher Premium (250g)
+Nome do arquivo: ovo_premium_250g.jpg
+
+Produto: Ovo de Colher Premium (350g)
+Nome do arquivo: ovo_premium_350g.jpg
+
+Produto: Ovo de Colher Premium (500g)
+Nome do arquivo: ovo_premium_500g.jpg
+
+Produto: Controle Gamer
+Nome do arquivo: controle_gamer.jpg
+
+Produto: Ovo Casca de Brownie
+Nome do arquivo: ovo_brownie.jpg
+
+OBS: Se sua foto for .png, você precisará mudar a extensão no painel de admin ou converter a foto para .jpg.
