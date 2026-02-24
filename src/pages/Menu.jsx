@@ -78,48 +78,37 @@ export default function Menu({ type }) {
         </div>
       </div>
 
-      {/* Info Modal Popup */}
-      {showInfoModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-          <div className="bg-white rounded-lg shadow-2xl max-w-md w-full p-6 animate-fade-in-up border-2 border-[#D4AF37]">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-[#D4AF37] font-serif mb-2">Informações Importantes</h2>
-              <div className="w-16 h-1 bg-[#D4AF37] mx-auto rounded-full"></div>
-            </div>
-            
-            <ul className="space-y-4 text-gray-700 text-base mb-8 text-left">
+      {/* Info Section (Apenas Menu Tradicional) */}
+      {type !== 'pascoa' && (
+        <div className="container mx-auto px-4 mt-12 mb-8">
+          <div className="bg-white/90 p-6 rounded-lg shadow-md border-l-4 border-[#D4AF37]">
+            <h2 className="text-2xl font-bold text-[#D4AF37] mb-4 font-serif">Informações Importantes</h2>
+            <ul className="space-y-3 text-gray-700 text-lg">
               <li className="flex items-start">
-                <span className="text-[#D4AF37] mr-3 text-xl">•</span>
+                <span className="font-bold mr-2 text-[#D4AF37]">•</span>
                 <span>
                   <strong>Cento de Docinhos:</strong> Cada brigadeiro tem aproximadamente 15g.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-[#D4AF37] mr-3 text-xl">•</span>
+                <span className="font-bold mr-2 text-[#D4AF37]">•</span>
                 <span>
                   <strong>Encomendas:</strong> Devem ser feitas com no mínimo 7 dias de antecedência.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-[#D4AF37] mr-3 text-xl">•</span>
+                <span className="font-bold mr-2 text-[#D4AF37]">•</span>
                 <span>
                   <strong>Entregas:</strong> Somente via Uber Flash (custo pelo cliente) ou retirada no local.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-[#D4AF37] mr-3 text-xl">•</span>
+                <span className="font-bold mr-2 text-[#D4AF37]">•</span>
                 <span>
                   <strong>Páscoa:</strong> Encomendas de Ovos até dia 31/03. Após esta data, pedidos de urgência terão taxa extra.
                 </span>
               </li>
             </ul>
-
-            <button
-              onClick={() => setShowInfoModal(false)}
-              className="w-full bg-[#D4AF37] text-white font-bold py-3.5 rounded-lg hover:bg-[#b5952f] transition duration-300 transform hover:scale-[1.02] shadow-lg flex items-center justify-center uppercase tracking-wide"
-            >
-              Estou Ciente
-            </button>
           </div>
         </div>
       )}
