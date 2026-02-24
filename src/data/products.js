@@ -64,22 +64,33 @@ export const products = [
   },
   */
     
-  // --- INDIVIDUAIS / OUTROS ---
-  /*
+  // --- MINI BROWNIES ---
   {
     id: 7,
     name: "Mini Brownie",
-    description: "Mini brownies deliciosos. Sabores: Brigadeiro ou Ninho.",
-    image: "/images/tradicional/mini_brownie.jpg",
+    description: "Mini brownies deliciosos. Sabores: Ninho ou Brigadeiro.",
+    image: "/images/tradicional/MiniBrownie.jpeg",
+    category: "Festa (Centos)",
+    hasVariations: true,
+    variations: [
+      { size: "50 un", price: 100.00, maxFlavors: 1 },
+      { size: "100 un", price: 190.00, maxFlavors: 2 }
+    ],
+    availableFlavors: ["Ninho", "Brigadeiro"]
+  },
+  {
+    id: 8,
+    name: "Mini Brownie Personalizado",
+    description: "Personalize seu brownie do jeito que você quiser! Detalhes via DM.",
+    image: "/images/tradicional/MiniBrowniePersonalizado.jpeg",
     category: "Festa (Centos)",
     hasVariations: true,
     variations: [
       { size: "50 un", price: 100.00, maxFlavors: 1 },
       { size: "100 un", price: 190.00, maxFlavors: 1 }
     ],
-    availableFlavors: ["Brigadeiro", "Ninho"]
+    availableFlavors: ["Personalizado (Combinar detalhes)"]
   },
-  */
   {
     id: 9,
     name: "Caixinha com 12 Unidades",
