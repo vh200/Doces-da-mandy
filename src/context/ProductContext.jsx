@@ -5,11 +5,11 @@ const ProductContext = createContext();
 
 export function ProductProvider({ children }) {
   // Versão dos dados para invalidar cache antigo se a estrutura mudar
-  const DATA_VERSION = 'v25_update_cento_image';
+  const DATA_VERSION = 'v26_add_mini_brownies';
 
   // Lista de IDs que DEVEM ser removidos permanentemente nesta versão (blacklist)
   // Útil para remover produtos que foram comentados no código mas podem estar persistindo no cache
-  const FORCED_REMOVE_IDS = [5, 7, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110]; // Docinhos Temáticos, Mini Brownie, Antigos Ovos de Páscoa
+  const FORCED_REMOVE_IDS = [5, 100, 101, 102, 103, 104, 105, 106, 107, 108, 110]; // Docinhos Temáticos, Antigos Ovos de Páscoa
 
   // Função auxiliar para carregar IDs excluídos
   const loadDeletedIds = () => {
