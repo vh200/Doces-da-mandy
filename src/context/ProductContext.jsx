@@ -49,6 +49,13 @@ export function ProductProvider({ children }) {
         const mergedData = initialData.map(initialItem => {
           const savedItem = parsedSavedData.find(p => p.id === initialItem.id);
           if (savedItem) {
+            // CORREÇÃO FORÇADA: Se for o Cento Tradicional (ID 1), forçamos a imagem nova
+            // Isso corrige o problema de cache onde o usuário tem o link quebrado salvo no localStorage
+            if (initialItem.id === 1) {
+                savedItem.image = initialItem.image;
+                savedItem.imageFit = initialItem.imageFit;
+            }
+
             // Mescla: propriedades do código + propriedades salvas (salvas ganham)
             return { ...initialItem, ...savedItem };
           }
