@@ -11,7 +11,7 @@ export const products = [
     id: 1,
     name: "Cento Tradicional",
     description: "Os clássicos que todo mundo ama. 100 unidades.",
-    image: "/images/tradicional/cento_tradicional_v3.jpeg",
+    image: "/images/tradicional/cento-tradicional-final-v4.jpeg",
     category: "Festa (Centos)",
     imageFit: "contain",
     hasVariations: true,
