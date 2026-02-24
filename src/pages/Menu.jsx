@@ -2,15 +2,21 @@ import React, { useState } from 'react';
 import ProductCard from '../components/ProductCard';
 import { useCart } from '../context/CartContext';
 import { useProducts } from '../context/ProductContext';
-import { FaShoppingCart, FaArrowLeft } from 'react-icons/fa';
+import { FaShoppingCart, FaArrowLeft, FaTimes } from 'react-icons/fa';
 import CartModal from '../components/CartModal';
 import { Link } from 'react-router-dom';
 
 export default function Menu({ type }) {
   const [selectedCategory, setSelectedCategory] = useState('Todos');
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [showInfoModal, setShowInfoModal] = useState(true);
   const { cart } = useCart();
   const { products: normalProducts, easterProducts } = useProducts();
+
+  // Resetar modal ao trocar de menu
+  React.useEffect(() => {
+    setShowInfoModal(true);
+  }, [type]);
 
   const products = type === 'pascoa' ? easterProducts : normalProducts;
   const title = type === 'pascoa' ? 'Cardápio de Páscoa 🐰' : 'Cardápio Tradicional';
@@ -78,37 +84,54 @@ export default function Menu({ type }) {
         </div>
       </div>
 
-      {/* Info Section (Apenas Menu Tradicional) */}
-      {type !== 'pascoa' && (
-        <div className="container mx-auto px-4 mt-12 mb-8">
-          <div className="bg-white/90 p-6 rounded-lg shadow-md border-l-4 border-[#D4AF37]">
-            <h2 className="text-2xl font-bold text-[#D4AF37] mb-4 font-serif">Informações Importantes</h2>
-            <ul className="space-y-3 text-gray-700 text-lg">
+      {/* Info Modal (Pop-up ao abrir o cardápio) */}
+      {showInfoModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 animate-fadeIn">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full relative shadow-2xl border-2 border-[#D4AF37]">
+            <button 
+              onClick={() => setShowInfoModal(false)} 
+              className="absolute top-3 right-3 text-gray-500 hover:text-red-500 transition-colors"
+            >
+              <FaTimes size={24} />
+            </button>
+            
+            <h2 className="text-2xl font-bold text-[#D4AF37] mb-6 font-serif text-center border-b pb-2">
+              Informações Importantes
+            </h2>
+            
+            <ul className="space-y-4 text-gray-700 text-base">
               <li className="flex items-start">
-                <span className="font-bold mr-2 text-[#D4AF37]">•</span>
+                <span className="font-bold mr-2 text-[#D4AF37] text-xl">•</span>
                 <span>
                   <strong>Cento de Docinhos:</strong> Cada brigadeiro tem aproximadamente 15g.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="font-bold mr-2 text-[#D4AF37]">•</span>
+                <span className="font-bold mr-2 text-[#D4AF37] text-xl">•</span>
                 <span>
                   <strong>Encomendas:</strong> Devem ser feitas com no mínimo 7 dias de antecedência.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="font-bold mr-2 text-[#D4AF37]">•</span>
+                <span className="font-bold mr-2 text-[#D4AF37] text-xl">•</span>
                 <span>
                   <strong>Entregas:</strong> Somente via Uber Flash (custo pelo cliente) ou retirada no local.
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="font-bold mr-2 text-[#D4AF37]">•</span>
+                <span className="font-bold mr-2 text-[#D4AF37] text-xl">•</span>
                 <span>
                   <strong>Páscoa:</strong> Encomendas de Ovos até dia 31/03. Após esta data, pedidos de urgência terão taxa extra.
                 </span>
               </li>
             </ul>
+
+            <button 
+              onClick={() => setShowInfoModal(false)} 
+              className="w-full mt-8 bg-[#D4AF37] text-white py-3 rounded-lg font-bold text-lg hover:bg-[#b5952f] transition-colors shadow-md"
+            >
+              Entendi, vamos ver as delícias! 😋
+            </button>
           </div>
         </div>
       )}
